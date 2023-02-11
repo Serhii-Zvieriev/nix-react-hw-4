@@ -1,7 +1,9 @@
 import "./App.css";
 
+import RegistrationModal from "./components/RegistrationModal/RegistrationModal";
+
 function App() {
-  return <div className="App">Hello world!</div>;
+  return <RegistrationModal />;
 }
 
 export default App;
