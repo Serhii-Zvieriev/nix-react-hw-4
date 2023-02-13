@@ -15,6 +15,14 @@ export default function PageSecond() {
   });
 
   const onClickOnSecondPage = () => {
+    if (
+      city.current.value === "" ||
+      street.current.value === "" ||
+      house.current.value === ""
+    ) {
+      alert("Заполнены не все поля");
+      return;
+    }
     contextValue.contextOnNextClick();
     contextValue.contextSetCity(city.current.value);
     contextValue.contextSetStreet(street.current.value);

@@ -1,5 +1,7 @@
-import { useContext, useRef, useEffect } from "react";
+import { useContext, useRef } from "react";
 import userContext from "../../context/user-context";
+
+import Avatars from "../Avatars/Avatars";
 
 export default function PageThird() {
   const contextValue = useContext(userContext);
@@ -26,6 +28,14 @@ export default function PageThird() {
     };
   }
 
+  const onClickOnThirdPage = () => {
+    if (!contextValue.avatar) {
+      alert("выбирете аватарку");
+      return;
+    }
+    contextValue.contextOnNextClick();
+  };
+
   return (
     <div className="container">
       <p>Шаг: 3</p>
@@ -47,11 +57,15 @@ export default function PageThird() {
         />
       </div>
 
+      <Avatars />
+
       <div className="buttons">
         <button type="button" onClick={contextValue.contextOnPreviousClick}>
           Previous
         </button>
-        <button type="button">Next</button>
+        <button type="button" onClick={onClickOnThirdPage}>
+          Next
+        </button>
       </div>
     </div>
   );

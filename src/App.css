@@ -64,3 +64,29 @@ button:hover {
 /* input[type="file"] { */
 /* display: none; */
 /* } */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4%;
+
+  margin-bottom: 20px;
+}
+
+.clickOnImg {
+  cursor: pointer;
+}
+
+.final p {
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+.final p.bold {
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.final img {
+  margin: 0 auto;
+}

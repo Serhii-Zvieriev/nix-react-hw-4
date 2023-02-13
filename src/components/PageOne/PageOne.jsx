@@ -15,6 +15,14 @@ export default function PageOne() {
   });
 
   const onClickOnFirstPage = () => {
+    if (
+      username.current.value === "" ||
+      surname.current.value === "" ||
+      email.current.value === ""
+    ) {
+      alert("Заполнены не все поля");
+      return;
+    }
     contextValue.contextOnNextClick();
     contextValue.contextSetName(username.current.value);
     contextValue.contextSetSurname(surname.current.value);

@@ -19,6 +19,7 @@ export default function RegistrationModal() {
   const [street, setStreet] = useState("");
   const [house, setHouse] = useState("");
   const [avatar, sestAvatar] = useState(null);
+  const [password, sesPassword] = useState("");
 
   const onNextClick = () => {
     setSurrentPage(currentPage + 1);
@@ -44,6 +45,8 @@ export default function RegistrationModal() {
     contextHouse: house,
     contextSetHouse: setHouse,
     avatar,
+    password,
+    sesPassword,
     sestAvatar,
     contextOnNextClick: onNextClick,
     contextOnPreviousClick: onPreviousClick,
